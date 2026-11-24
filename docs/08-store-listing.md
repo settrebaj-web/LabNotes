@@ -26,9 +26,9 @@ Pixel 9 эмуляторында release немесе staging нұсқасын �
 > Staging-тің debug батырмаларын жасыру үшін скриншотты **release** нұсқасынан түсіріңіз.
 
 ## Құпиялылық саясатын жариялау (GitHub Pages)
-1. `docs/privacy-policy.html` ішіндегі `YOUR_EMAIL@example.com` мекенжайын ауыстырыңыз.
+1. Байланыс арнасы ретінде GitHub Issues көрсетілген (жеке e-mail жарияланбайды).
 2. GitHub → репозиторий → **Settings → Pages** → Source: *Deploy from a branch*, Branch: `main`, Folder: `/docs` → Save.
-3. 1–2 минуттан кейін: `https://<USERNAME>.github.io/LabNotes/privacy-policy.html` — осы сілтемені
+3. 1–2 минуттан кейін: `https://<settrebaj-web>.github.io/LabNotes/privacy-policy.html` — осы сілтемені
    Play Console → **App content → Privacy policy** өрісіне қойыңыз.
 
 ## Жас рейтингі (App content → Content rating, IARC сауалнамасы)
