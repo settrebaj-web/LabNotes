@@ -1,0 +1,10 @@
+name: "❓ Сұрақ (Question)"
+description: Қосымшаны пайдалану туралы сұрақ
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Сұрағыңыз
+    validations:
+      required: true

@@ -1,0 +1,14 @@
+name: "✨ Ұсыныс (Feature request)"
+description: Жаңа мүмкіндік ұсыну
+labels: ["enhancement", "triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Қандай мәселені шешеді?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Ұсынылатын шешім

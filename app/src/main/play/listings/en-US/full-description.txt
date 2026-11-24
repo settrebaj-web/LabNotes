@@ -1,0 +1,11 @@
+LabNotes is a simple and fast notes app.
+
+• Add a note with one tap
+• Instant search across all notes
+• Delete notes you no longer need
+• No sign-up: notes are stored only on your device
+• Light and dark theme
+
+We never collect your notes or share them with third parties. To improve stability the app sends anonymous crash reports and aggregated usage statistics (Firebase Crashlytics and Analytics).
+
+Student project for the "Mobile App Development Technologies" course, AUES.

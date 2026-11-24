@@ -1,0 +1,37 @@
+name: "🐞 Қате (Bug)"
+description: Қосымшадағы ақау туралы хабарлау
+labels: ["bug", "triage"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Қосымша нұсқасы
+      description: Экранның төменгі жағындағы мәтін, мыс. v1.2.0 (10200)
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Құрылғы және Android нұсқасы
+      placeholder: Samsung A54, Android 15
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Қайталау қадамдары
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Күтілген және нақты нәтиже
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Әсер деңгейі (бағалау)
+      options: ["Крэш / деректер жоғалады", "Функция жұмыс істемейді", "Ыңғайсыздық", "Косметика"]

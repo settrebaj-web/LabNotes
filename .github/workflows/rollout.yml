@@ -1,0 +1,39 @@
+# Тапсырма 12, 14 — production раздачасын қолмен басқару: 1% → 10% → 50% → 100%, немесе тоқтату (halted)
+name: Rollout control
+
+on:
+  workflow_dispatch:
+    inputs:
+      fraction:
+        description: "Пайдаланушылар үлесі (0.01, 0.1, 0.5). completed үшін бос қалдырыңыз"
+        required: false
+        default: "0.1"
+      status:
+        description: "inProgress | completed | halted"
+        required: true
+        default: inProgress
+        type: choice
+        options: [inProgress, completed, halted]
+
+jobs:
+  rollout:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Restore Play credentials
+        env:
+          PLAY_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          echo "$PLAY_JSON" > "$RUNNER_TEMP/play.json"
+          echo "PLAY_CREDENTIALS_PATH=$RUNNER_TEMP/play.json" >> "$GITHUB_ENV"
+      - name: Update production track
+        run: |
+          ARGS="--update production --release-status ${{ inputs.status }}"
+          if [ "${{ inputs.status }}" = "inProgress" ]; then ARGS="$ARGS --user-fraction ${{ inputs.fraction }}"; fi
+          ./gradlew promoteReleaseArtifact $ARGS

@@ -1,0 +1,4 @@
+First LabNotes 1.0.0 release:
+• add and delete notes
+• search notes
+• light and dark theme

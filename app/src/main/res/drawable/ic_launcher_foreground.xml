@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Бүктелген бұрышы бар жазба парағы -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,30 L64,30 L74,40 L74,78 L36,78 Z" />
+    <path
+        android:fillColor="#BBDEFB"
+        android:pathData="M64,30 L64,40 L74,40 Z" />
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M42,48 h26 v3 h-26 Z M42,56 h26 v3 h-26 Z M42,64 h18 v3 h-18 Z" />
+</vector>

@@ -1,0 +1,23 @@
+# Android Studio / Gradle
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/app/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+.kotlin/
+
+# --- Құпиялар: ЕШҚАШАН коммиттемеңіз (Тапсырма 3, 5) ---
+keystore.properties
+*.jks
+*.keystore
+play-service-account.json
+app/google-services.json
+.env
+
+# Релиз артефактілері (mapping.txt т.б.) — CI artifacts/GitHub Releases ішінде сақталады
+/release-artifacts/
