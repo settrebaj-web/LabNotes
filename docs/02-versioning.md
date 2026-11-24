@@ -42,4 +42,12 @@ git push origin main --tags
 ```
 Android Studio-да: **Git → New Tag…** (немесе Terminal). Тексеру: `git tag -n`.
 
+## Менің нәтижем
+```
+$ git log --oneline --decorate
+0d366d4 (HEAD -> main, tag: v1.0.0) chore(release): 1.0.0
+51b7e55 (tag: v0.1.0) chore: LabNotes 0.1.0 — build variants, R8, signing, CI
+```
+v0.1.0 → versionCode 100, v1.0.0 → versionCode 10000 (`version.properties` бойынша Gradle есептеді).
+
 Есепке скриншот: `git log --oneline --decorate` шығысы, онда `tag: v0.1.0`, `tag: v1.0.0` көрінеді.

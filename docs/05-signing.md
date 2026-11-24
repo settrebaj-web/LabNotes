@@ -40,4 +40,14 @@ gradlew.bat assembleRelease
 4. CI үшін: `base64 -w0 labnotes-upload.jks` → GitHub Secret `KEYSTORE_BASE64` (PowerShell: `[Convert]::ToBase64String([IO.File]::ReadAllBytes("labnotes-upload.jks"))`).
 5. Сертификат SHA-256 саусақ ізін `keytool -list -v` арқылы жазып қойыңыз — кілтті сәйкестендіру үшін.
 
+## Менің нәтижем (24.11.2026)
+- Keystore: `C:\Users\settr\keys\labnotes-upload.jks` (жоба папкасынан тыс), тип PKCS12, RSA 4096, жарамдылығы 10 000 күн (~2054 ж.), alias `upload`.
+- `keystore.properties` → `.gitignore` ішінде, git-ке түспеді (`git status` тексерілді).
+- `apksigner verify --print-certs app-release.apk` (толық шығыс: `release-artifacts/apksigner-verify.txt`):
+```
+Signer #1 certificate DN: CN=Torebay, OU=IIADk-24-1b, O=AUES, L=Almaty, C=KZ
+Signer #1 certificate SHA-256 digest: cddbd13bc0372f9b8870dd5630d1705a1b48003356cec201dda906a002fc688b
+```
+Бұл SHA-256 — upload key саусақ ізі; Play Console → App integrity бетінде «Upload key certificate» осымен сәйкес келуі тиіс.
+
 Есепке: Generate Signed Bundle диалогының скриншоты (парольдерсіз!), `apksigner verify` шығысы.
