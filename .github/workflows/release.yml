@@ -65,7 +65,7 @@ jobs:
           retention-days: 90
 
       - name: Publish to internal channel (GitHub pre-release)
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           name: LabNotes ${{ github.ref_name }}
           prerelease: true
