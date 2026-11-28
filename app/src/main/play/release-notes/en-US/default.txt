@@ -1,4 +1,3 @@
-First LabNotes 1.0.0 release:
-• add and delete notes
-• search notes
-• light and dark theme
+LabNotes 1.1.0:
+• New: privacy notice on first launch
+• Fixed: the release build no longer shows the internal server address
